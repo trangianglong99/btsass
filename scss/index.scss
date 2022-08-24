@@ -1,12 +1,12 @@
 .container {
     max-width: 1280px;
-    margin: 0 15px;
     box-sizing: border-box;
 }
 
 $text-c1-primary: #2a73dd;
 $text-c1-dark: #181818;
 $text-c1-light: #fff;
+$text-c1-pulper: #b61984;
 
 $text-xs: 14px;
 $text-base: 16px;
@@ -16,6 +16,7 @@ $text-3xl: 30px;
 $text-4xl: 40px;
 $text-5xl: 50px;
 $text-6xl: 60px;
+$text-center : align center;
 
 $text-light: 300;
 $text-regular: 400;
@@ -32,16 +33,37 @@ $bg-transparent: transparent;
 /*
     margin
 */
-$mg-left: 50px;
+$mg-left: 20px;
 $mg-top: 20px;
 $mg-rigth: 20px;
+$mg: 10px;
 
 /*
     padding
 */
+$pd-top : 60px;
 $pd-right: 10px;
+$pd : 5px;
+
+/*
+    border
+*/
+
+$border-radius : 10px;
+
+/*
+    the h
+*/
+
+$h1 : 60px;
+$h3 : 24px;
+$h4 : 20px;
+$h5 : 16px;
 
 .header {
+    background-image: url(../images/yellow_top_wave_01.png);
+    background-color: $bg-transparent;
+
     .container {
         display: flex;
         justify-content: space-between;
@@ -61,23 +83,64 @@ $pd-right: 10px;
         }
 
         .btnButton {
-            // display: flex;
+            display: flex;
             margin-top: $mg-top;
-            // padding-right: $pd-right;
+            padding-right: $pd-right;
 
             .button {
-                // display: flex;
+                // padding: $pd;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                border-radius: $border-radius;
+
 
                 i {
-                    // display: inline-block;
+                    display: inline-block;
+                    text-align: $text-center;
+                    margin-right: $mg-rigth;
                 }
 
                 span {
-                    // display: inline-block;
+                    display: inline-block;
+                    text-align: $text-center;
                 }
             }
 
-            .icon {}
+            .icon {
+                margin-left: $mg-left;
+
+                i {
+                    margin-right: $mg-rigth;
+                }
+            }
         }
+    }
+}
+
+.carousel {
+    display: flex;
+    padding-top: $pd-top;
+
+    .container {
+        display: flex;
+
+        .left {
+            padding-top: $pd-top;
+
+            h1 {
+                font-family: "Montserrat", Arial, Helvetica, sans-serif;
+                font-size: $h1;
+                font-weight: $text-bold;
+            }
+
+            h3 {
+                font-family: "Montserrat", Arial, Helvetica, sans-serif;
+                font-size: $h3;
+                color: $text-c1-pulper;
+            }
+        }
+
+        .right {}
     }
 }
